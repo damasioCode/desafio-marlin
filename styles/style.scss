@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+
+$header-bg-color: #FEFEFE;
+$menu-color-yellow: #D6A430;
+
+* {
+	box-sizing: border-box;
+}
+
+body, h1, h2, h3, a, p, ul, li, blockquote {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: #FBFBFB;
+	font-family: 'Open Sans';
+}
+a {
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+	display: block;
+}
+
+ul {
+	list-style: none;
+}
+
+p {
+	font-size: 1rem;
+}
+
+.bg-menu {
+	background: $header-bg-color;
+	
+	.menu {
+		max-width: 1274px;
+		height: 92px;
+
+		margin: 0 auto;
+		padding: 0 20px;
+
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		.brand {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			gap: 54.55px;
+		}
+	}
+	
+	.menu-items ul {
+		display: flex;
+		gap: 24px;
+
+		a {
+			font-weight: 600;
+			color: $menu-color-yellow;
+		}
+	}
+}
