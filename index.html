@@ -5,6 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="styles/style.min.css">
+	<link rel="stylesheet" href="styles/responsive.min.css">
 	<title>Desafio - Marlin</title>
 </head>
 <body>
@@ -18,8 +19,11 @@
 					<img src="src/porto_seguro.png" alt="Porto seguro">
 				</li>
 			</ul>
-			<nav class="menu-items">
-				<ul>
+			<nav id="nav" class="menu-items">
+				<button id="btn-mobile" aria-label="Abrir menu" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
+					<span id="hamburger"></span>
+					</button>
+				<ul id="menu" role="menu">
 					<li><a href="#">Sobre</a></li>
 					<li><a href="#">Hospitais</a></li>
 					<li><a href="#">Benefícios</a></li>
@@ -132,6 +136,50 @@
 	</section>
 	<section class="contact container">
 		<h1 class="title-template">Quer saber mais?</h1>
+		<blockquote>
+			<img src="src/phone.svg" alt="telefone icone">
+			<p>Ainda sobrou alguma dúvida sobre qual o melhor Plano para sua empresa? <br>Envie seus dados e deixe que a NS Benefícios entrará em contato assim que possível.</p>
+		</blockquote>
+		<div class="contact-form">
+			<article>
+				<form action="">
+					<label for="name">NOME:</label><br>
+					<input type="text" placeholder="Insira aqui o seu nome." id="name"><br>
+					<label for="phone">TELEFONE:</label><br>
+					<input type="text" placeholder="Insira aqui o seu telefone" id="phone"><br>
+					<label for="email">EMAIL:</label><br>
+					<input type="email" placeholder="Insira aqui o seu email." id="email"><br>
+					<div class="g-recaptcha" data-sitekey="6LdvpV0bAAAAAHGCrQ6g-vE5OmPC42YXwWozB6CN"></div>
+					<div><input type="button" value="ENVIAR CONTATO"></div>
+				</form>
+			</article>
+
+			<aside class="contact-buttons">
+				<p>FALE CONOSCO AGORA MESMO:</p>
+				<h2>4020-6440</h2>
+				<button>
+					clique aqui para <br>enviar uma mensagem
+				</button>
+				<button>
+					clique aqui para ligar
+				</button>
+				<p>Horário de Atendimento de 8h às 17h</p>
+			</aside>
+		</div>
 	</section>
+	<footer class="footer">
+		<div class="development">
+			<img src="src/ouro_tag.png" alt="Ouro Tag">
+			<div>	
+				<p>Desenvolvimento: </p>
+				<img src="src/marlin-logo.png" alt="Marlin">
+			</div>
+		</div>
+		<p>
+			Todos os direitos reservados. © 2021<br> Norte a Sul Corretora de Seguros de Vida, Capitalização,<br> Previdência Privada e Planos de Saúde LTDA CNPJ 14.280.310/0001-11<br> Av. Nilo Peçanha, 50 - Sala 809 - Centro Rio de Janeiro/RJ - CEP: 20.020-906
+		</p>
+	</footer>
+	<script src='https://www.google.com/recaptcha/api.js'></script>
+	<script src="js/script.js"></script>
 </body>
 </html>
