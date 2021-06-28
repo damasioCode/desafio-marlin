@@ -14,7 +14,15 @@
   display: none;
 }
 
+.contact-menu {
+  display: none;
+}
+
 @media (max-width: 792px) {
+  .container {
+    padding: 18px;
+  }
+  /*-------------- */
   #btn-mobile {
     display: block;
   }
@@ -27,19 +35,26 @@
     background: #9A6D0C;
     height: 0px;
     transition: .6s;
-    z-index: 999;
+    z-index: 99;
     visibility: hidden;
     overflow-y: hidden;
   }
   #nav.active #menu {
-    height: calc(100vh - 62px);
+    height: calc(110vh - 62px);
     visibility: visible;
     overflow-y: auto;
   }
-  #menu a {
+  #menu li {
     padding: 1rem 0;
+    border-bottom: 2px solid #d6a430;
+  }
+  #menu li a {
     margin: 0 1rem;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    letter-spacing: 4.2px;
+    font-weight: 600px;
   }
   #btn-mobile {
     display: flex;
@@ -78,5 +93,139 @@
   /* ------------------------- */
   .bg-menu .menu {
     height: 62px;
+  }
+  .bg-menu .contact-menu {
+    max-width: 470px;
+    text-align: center;
+    padding: 0 20px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex: 1 1 300px;
+  }
+  .bg-menu .contact-menu p {
+    color: #FFFFFF;
+    font-size: 1.125rem;
+    font-weight: bold;
+    margin-top: 40px;
+    margin-bottom: 8px;
+  }
+  .bg-menu .contact-menu p:nth-last-child(1) {
+    font-size: .875rem;
+    margin-top: 12px;
+    color: #FFFFFF;
+    font-weight: normal;
+  }
+  .bg-menu .contact-menu h2 {
+    font-size: 2rem;
+    color: #FFFFFF;
+    font-weight: bold;
+    margin-bottom: 17px;
+  }
+  .bg-menu .contact-menu button {
+    width: 100%;
+    height: 90px;
+    background: #F7B53D;
+    color: #FFFFFF;
+    font-size: 1.125rem;
+    font-family: 'Open Sans';
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: left;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.29);
+  }
+  .bg-menu .contact-menu button + button {
+    margin-top: 32px;
+  }
+  .initial-banner {
+    align-items: flex-end;
+  }
+  .initial-banner blockquote {
+    max-width: 377px;
+    margin-left: 0;
+    padding: 0 20px;
+  }
+  .initial-banner blockquote h1 {
+    font-size: 1.875rem;
+  }
+  .initial-banner blockquote h2 {
+    display: none;
+  }
+  .initial-banner blockquote div {
+    display: flex;
+    margin: 18px 0;
+  }
+  .initial-banner blockquote div p {
+    align-self: flex-start;
+  }
+  .initial-banner blockquote div p:nth-child(1) {
+    font-size: 1.125rem;
+    padding-right: 6px;
+  }
+  .initial-banner blockquote div p:nth-last-child(2) {
+    font-size: 1.125rem;
+    font-weight: bold;
+    margin-right: 8px;
+    display: flex;
+  }
+  .initial-banner blockquote div p:nth-last-child(2) span {
+    font-size: 2.125rem;
+    line-height: 36px;
+  }
+  .initial-banner blockquote div button {
+    font-size: .875rem;
+    margin-left: 16px;
+    padding: 11px 21px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.5);
+  }
+  .initial-banner blockquote p:nth-last-child(1) {
+    max-width: 317px;
+    margin-bottom: 30px;
+    font-size: .5rem;
+  }
+  .gold-business h1 {
+    max-width: 350px;
+  }
+  .gold-business ul {
+    padding: 24px;
+  }
+  .gold-business ul li:nth-child(1) {
+    max-width: 140px;
+  }
+  .gold-business ul li:nth-child(1) p:nth-child(1) {
+    font-size: .975rem;
+  }
+  .gold-business ul li:nth-child(1) p:nth-child(2) {
+    font-size: .975rem;
+  }
+  .gold-business ul li:nth-child(1) p:nth-child(3) {
+    font-size: 1.25rem;
+  }
+  .gold-business ul li:nth-child(1) p:nth-child(3) span {
+    font-size: 2.375rem;
+    line-height: 36px;
+  }
+  .gold-business ul li:nth-child(2) {
+    max-width: 135px;
+    margin: 0 12px;
+    flex: 1 1 90px;
+  }
+  .gold-business ul li:nth-child(2) p:nth-child(1) {
+    font-size: .6rem;
+  }
+  .gold-business ul li:nth-child(3) button {
+    letter-spacing: 1.2px;
+    font-size: .7rem;
+    padding: 7px 2px;
+  }
+  .gold-business ul li:nth-child(3) button:nth-child(1) {
+    background: #F7B53D;
+    margin-bottom: 20px;
+  }
+  .gold-business ul li:nth-child(3) button:nth-child(2) {
+    background: #9A6D0C;
   }
 }

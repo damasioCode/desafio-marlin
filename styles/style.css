@@ -63,7 +63,7 @@ p {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1000;
+  z-index: 10030;
 }
 
 .bg-menu .menu {
@@ -74,7 +74,6 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 10030;
 }
 
 .bg-menu .menu .brand {
@@ -96,7 +95,7 @@ p {
 
 .initial-banner {
   min-height: 768px;
-  background: url(../src/banner_inicial.png);
+  background: url(../src/banner_inicial.png) right;
   background-size: cover;
   display: flex;
   justify-content: flex-start;
@@ -177,7 +176,7 @@ p {
 .initial-banner blockquote p:nth-last-child(1) {
   max-width: 476px;
   font-size: .75rem;
-  opacity: 0.5;
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .gold-business ul {
