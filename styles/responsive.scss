@@ -1,14 +1,15 @@
+@import 'import/_color-font';
+
 #menu {
 	display: flex;
 	list-style: none;
 	gap: .5rem;
-
-	a {
-		display: block;
-		padding: .5rem
-	}
 }
 
+#menu a {
+	display: block;
+	padding: .5rem
+}
 
 #btn-mobile {
 	display: none;
@@ -25,10 +26,10 @@
 		width: 100%;
 		top: 62px;
 		right: 0px;
-		background: #e7e7e7;
+		background: $yellow-dark;
 		height: 0px;
 		transition: .6s;
-		z-index: 99;
+		z-index: 999;
 		visibility: hidden;
 		overflow-y: hidden;
 	}
@@ -36,12 +37,11 @@
 		height: calc(100vh - 62px);
 		visibility: visible;
 		overflow-y: auto;
-
-		a {
-			padding: 1rem 0;
-			margin: 0 1rem;
-			border-bottom: 2px solid rgba(0, 0, 0, .05);
-		}
+	}
+	#menu a {
+		padding: 1rem 0;
+		margin: 0 1rem;
+		border-bottom: 2px solid rgba(0, 0, 0, .05);
 	}
 
 	#btn-mobile {
