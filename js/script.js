@@ -13,5 +13,21 @@ function toggleMenu(event) {
 		event.currentTarget.setAttribute('aria-label', 'Abrir menu')
 	} 
 }
+
+function scrollToID(event) {
+  event.preventDefault();
+  const ID = event.currentTarget.getAttribute('href');
+  const target = document.querySelector(ID);
+  target.scrollIntoView();
+  // fecha o menu
+  btnMobile.click();
+}
+
+// Seleciona links internos
+const intLinks = document.querySelectorAll('[href^="#"]');
+intLinks.forEach(link => {
+  link.addEventListener('click', scrollToID);
+});
+
 btnMobile.addEventListener('click', toggleMenu);
 btnMobile.addEventListener('touchstart', toggleMenu);
