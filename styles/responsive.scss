@@ -39,12 +39,11 @@
 		background: $yellow-dark;
 		height: 0px;
 		transition: .6s;
-		z-index: 99;
 		visibility: hidden;
 		overflow-y: hidden;
 	}
 	#nav.active #menu {
-		height: calc(100vh - 62px);
+		height: 100vh;
 		visibility: visible;
 		overflow-y: auto;
 	}
@@ -275,4 +274,130 @@
 			}
 		}
 	}	
+
+	.contact {
+		blockquote {
+	
+			p {
+				font-size: 1.25rem;
+				color: $gray-high;
+				margin-left: 42px;
+			}
+		}
+	
+		.contact-form {
+			display: flex;
+			flex-wrap: wrap;
+			margin-bottom: 120px;
+	
+			article {
+				max-width: 582px;
+				padding-right: 62px;
+				flex: 1 1 300px;
+				position: relative;
+	
+				&::after {
+					content: '';
+					display: block;
+					width: 1px;
+					height: 488px;
+					background: rgba($color: $gray-low, $alpha: 0.24);
+					top: 0;
+					right: 0;
+					position: absolute;
+				}
+				
+				form {
+					label {
+						font-size: 1.125rem;
+						font-weight: bold;
+						color: $yellow-gold;
+					}
+	
+					input[type="text"], input[type="email"] {
+						width: 100%;
+						border: 1px solid $brown-low;
+						font-size: .8125rem;
+						padding: 20px;
+						margin-top: 12px;
+						margin-bottom: 20px;		
+					}
+	
+					div {
+						display: flex;
+						justify-content: center;
+						
+						input[type="button"] {
+							background: $yellow-pure;
+							width: 289px;
+							border: none;
+							border-radius: 30px;
+							padding: 12px 0;
+							margin-top: 16px;
+							font-size: 1rem;
+							font-weight: 600;
+							color: $white-pure;
+							letter-spacing: 3px;;
+							text-transform: uppercase;
+							font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+							box-shadow: 0px 3px 6px rgba($color: $black-pure, $alpha: 0.29);
+							cursor: pointer;
+						}
+					}
+				}
+			}
+	
+			.contact-buttons {
+				max-width: 470px;
+				padding-left: 62px;
+				text-align: center;
+				display: flex;
+				justify-content: center;
+				flex-direction: column;
+				flex: 1 1 300px;
+	
+				p {
+					color: $gray-semi;
+					font-size: 1.125rem;
+					font-weight: bold;
+					margin-top: 20px;
+					margin-bottom: 8px;
+	
+					&:nth-last-child(1) {
+						font-size: .875rem;
+						margin-top: 12px;
+						color: $gray-light;
+						font-weight: normal;
+					}
+				}
+	
+				h2 {
+					font-size: 2rem;
+					color: $yellow-gold;
+					font-weight: bold;
+					margin-bottom: 17px;
+				}
+	
+				button {
+					width: 100%;
+					height: 90px;
+					background: $yellow-pure;
+					color: $white-pure;
+					font-size: 1.125rem;
+					font-family: 'Open Sans';
+					font-weight: bold;
+					text-transform: uppercase;
+					text-align: left;
+					border: none;
+					border-radius: 12px;
+					box-shadow: 0px 3px 6px rgba($color: $black-pure, $alpha: 0.29);
+	
+					& + button {
+						margin-top: 32px;
+					}
+				}
+			}
+		}
+	}
+	
 }
