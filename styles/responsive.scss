@@ -44,7 +44,7 @@
 		overflow-y: hidden;
 	}
 	#nav.active #menu {
-		height: calc(110vh - 62px);
+		height: calc(100vh);
 		visibility: visible;
 		overflow-y: auto;
 	}
@@ -113,6 +113,7 @@
 			text-align: center;
 			padding: 0 20px;
 			margin: 0 auto;
+			margin-bottom: 20px;
 			display: flex;
 			justify-content: center;
 			flex-direction: column;
@@ -167,7 +168,7 @@
 		blockquote {
 			max-width: 377px;
 			margin-left: 0;
-			padding: 0 20px;
+			padding: 0 16px;
 			
 			h1 {
 				font-size: 1.875rem;
@@ -204,7 +205,7 @@
 	
 				button {
 					font-size: .875rem;
-					margin-left: 16px;
+					margin-left: 10px;
 					padding: 11px 21px;
 					box-shadow: 0px 3px 6px rgba($color: $black-pure, $alpha: 0.5);
 	
