@@ -18,6 +18,19 @@
   display: none;
 }
 
+#menu {
+  display: none;
+  position: absolute;
+  width: 100%;
+  top: 62px;
+  right: 0px;
+  background: #9A6D0C;
+  height: 0px;
+  transition: .6s;
+  visibility: hidden;
+  overflow-y: hidden;
+}
+
 @media (max-width: 792px) {
   .container {
     padding: 18px;

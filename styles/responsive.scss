@@ -19,6 +19,19 @@
 	display: none;
 }
 
+#menu {
+	display: none;
+	position: absolute;
+	width: 100%;
+	top: 62px;
+	right: 0px;
+	background: $yellow-dark;
+	height: 0px;
+	transition: .6s;
+	visibility: hidden;
+	overflow-y: hidden;
+}
+
 @media (max-width: 792px) {
 
 	.container {
