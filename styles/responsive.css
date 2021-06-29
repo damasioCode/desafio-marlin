@@ -2,12 +2,12 @@
 #menu {
   display: flex;
   list-style: none;
-  gap: .5rem;
+  gap: 0.5rem;
 }
 
 #menu a {
   display: block;
-  padding: .5rem;
+  padding: 0.5rem;
 }
 
 #btn-mobile {
@@ -20,7 +20,7 @@
 
 @media (max-width: 792px) {
   .container {
-    padding: 18px;
+    padding: 0 18px;
   }
   /*-------------- */
   #btn-mobile {
@@ -34,7 +34,7 @@
     right: 0px;
     background: #9A6D0C;
     height: 0px;
-    transition: .6s;
+    transition: 0.6s;
     visibility: hidden;
     overflow-y: hidden;
   }
@@ -58,7 +58,7 @@
   }
   #btn-mobile {
     display: flex;
-    padding: .5rem 1rem;
+    padding: 0.5rem 1rem;
     font-size: 1rem;
     border: none;
     background: none;
@@ -71,13 +71,13 @@
     width: 35px;
   }
   #hamburger::after, #hamburger::before {
-    content: '';
+    content: "";
     display: block;
     width: 35px;
     height: 2px;
     background-color: currentColor;
     margin-top: 8px;
-    transition: .3s;
+    transition: 0.3s;
     position: relative;
   }
   #nav.active #hamburger {
@@ -113,7 +113,7 @@
     margin-bottom: 8px;
   }
   .bg-menu .contact-menu p:nth-last-child(1) {
-    font-size: .875rem;
+    font-size: 0.875rem;
     margin-top: 12px;
     color: #FFFFFF;
     font-weight: normal;
@@ -130,7 +130,7 @@
     background: #F7B53D;
     color: #FFFFFF;
     font-size: 1.125rem;
-    font-family: 'Open Sans';
+    font-family: "Open Sans";
     font-weight: bold;
     text-transform: uppercase;
     text-align: left;
@@ -177,7 +177,7 @@
     line-height: 36px;
   }
   .initial-banner blockquote div button {
-    font-size: .875rem;
+    font-size: 0.875rem;
     margin-left: 10px;
     padding: 11px 21px;
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.5);
@@ -185,7 +185,7 @@
   .initial-banner blockquote p:nth-last-child(1) {
     max-width: 317px;
     margin-bottom: 30px;
-    font-size: .5rem;
+    font-size: 0.5rem;
   }
   .gold-business h1 {
     max-width: 350px;
@@ -195,12 +195,13 @@
   }
   .gold-business ul li:nth-child(1) {
     max-width: 140px;
+    flex: 1 1 100px;
   }
   .gold-business ul li:nth-child(1) p:nth-child(1) {
-    font-size: .975rem;
+    font-size: 0.975rem;
   }
   .gold-business ul li:nth-child(1) p:nth-child(2) {
-    font-size: .975rem;
+    font-size: 0.975rem;
   }
   .gold-business ul li:nth-child(1) p:nth-child(3) {
     font-size: 1.25rem;
@@ -211,15 +212,15 @@
   }
   .gold-business ul li:nth-child(2) {
     max-width: 135px;
-    margin: 0 12px;
+    margin: 0 2px;
     flex: 1 1 90px;
   }
   .gold-business ul li:nth-child(2) p:nth-child(1) {
-    font-size: .6rem;
+    font-size: 0.5rem;
   }
   .gold-business ul li:nth-child(3) button {
     letter-spacing: 1.2px;
-    font-size: .7rem;
+    font-size: 0.7rem;
     padding: 7px 2px;
   }
   .gold-business ul li:nth-child(3) button:nth-child(1) {
@@ -229,10 +230,88 @@
   .gold-business ul li:nth-child(3) button:nth-child(2) {
     background: #9A6D0C;
   }
-  .contact blockquote p {
+  .benefit ul li {
+    min-height: 0px;
+    border-radius: 12px;
+  }
+  .benefit ul li div {
+    max-width: 442px;
+    padding: 0 10px;
+    margin: 0 auto;
+  }
+  .benefit ul li h2 {
+    font-size: 0.975rem;
+  }
+  .benefit ul li p {
+    font-size: 0.85rem;
+    padding: 0 10px;
+    line-height: 17px;
+  }
+  .benefit ul li:nth-child(1) h2 {
+    margin-top: 8px;
+  }
+  .benefit ul li:nth-child(1) p {
+    margin-top: 8px;
+    margin-bottom: 17px;
+  }
+  .benefit ul li:nth-child(1) button {
+    font-size: 0.675rem;
+    padding: 9px 0;
+    margin-bottom: 33px;
+  }
+  .benefit ul li:nth-child(2) h2 {
+    margin: 0 auto;
+    max-width: 190px;
+    margin-top: 16px;
+  }
+  .benefit ul li:nth-child(2) p {
+    margin-top: 22px;
+    margin-bottom: 25px;
+    line-height: 17px;
+  }
+  .services .services-cards .services-item {
+    min-height: 0;
+    padding-bottom: 40px;
+  }
+  .services .services-cards .services-item div h2 {
     font-size: 1.25rem;
-    color: #404040;
-    margin-left: 42px;
+    margin-top: 27px;
+    margin-bottom: 18px;
+  }
+  .services .services-cards .services-item div h3 {
+    font-size: 0.975rem;
+    max-width: 244px;
+    margin: 0 auto;
+    line-height: 20px;
+  }
+  .services .services-cards .services-item div ul li p {
+    max-width: 225px;
+    font-size: 0.875rem;
+  }
+  .services .services-cards .services-item div ul li + li {
+    margin-top: 18px;
+  }
+  .services .services-cards .services-item:nth-child(2) div h3 {
+    text-align: center;
+  }
+  .services .services-cards .services-item:nth-child(2) div h3::after {
+    margin-top: 30px;
+  }
+  .services .services-cards .services-item:nth-child(2) div ul {
+    margin: 0 20px;
+  }
+  .services .services-cards .services-item:nth-child(2) div ul p {
+    max-width: 200px;
+  }
+  .contact blockquote {
+    margin-top: 16px;
+    margin-bottom: 20px;
+    flex-grow: 1;
+  }
+  .contact blockquote p {
+    flex: 1 1 200px;
+    font-size: 0.975rem;
+    margin-left: 8px;
   }
   .contact .contact-form {
     display: flex;
@@ -245,7 +324,7 @@
     position: relative;
   }
   .contact .contact-form article::after {
-    content: '';
+    content: "";
     display: none;
     width: 1px;
     height: 488px;
@@ -259,10 +338,11 @@
     font-weight: bold;
     color: #E8BB15;
   }
-  .contact .contact-form article form input[type="text"], .contact .contact-form article form input[type="email"] {
+  .contact .contact-form article form input[type="text"],
+  .contact .contact-form article form input[type="email"] {
     width: 100%;
     border: 1px solid #D0BC90;
-    font-size: .8125rem;
+    font-size: 0.8125rem;
     padding: 20px;
     margin-top: 12px;
     margin-bottom: 20px;
@@ -283,7 +363,7 @@
     color: #FFFFFF;
     letter-spacing: 3px;
     text-transform: uppercase;
-    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.29);
     cursor: pointer;
   }
@@ -298,7 +378,7 @@
     margin-bottom: 8px;
   }
   .contact .contact-form .contact-buttons p:nth-last-child(1) {
-    font-size: .875rem;
+    font-size: 0.875rem;
     margin-top: 12px;
     color: #A7A7A7;
     font-weight: normal;
@@ -315,7 +395,7 @@
     background: #F7B53D;
     color: #FFFFFF;
     font-size: 1.125rem;
-    font-family: 'Open Sans';
+    font-family: "Open Sans";
     font-weight: bold;
     text-transform: uppercase;
     text-align: left;

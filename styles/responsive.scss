@@ -1,397 +1,507 @@
-@import 'import/_color-font';
+@import "import/_color-font";
 
 #menu {
-	display: flex;
-	list-style: none;
-	gap: .5rem;
+  display: flex;
+  list-style: none;
+  gap: 0.5rem;
 }
 
 #menu a {
-	display: block;
-	padding: .5rem
+  display: block;
+  padding: 0.5rem;
 }
 
 #btn-mobile {
-	display: none;
+  display: none;
 }
 
 .contact-menu {
-	display: none;
+  display: none;
 }
 
 @media (max-width: 792px) {
+  .container {
+    padding: 0 18px;
+  }
+  /*-------------- */
 
-	.container {
-		padding: 18px;
-	}
-	/*-------------- */
+  #btn-mobile {
+    display: block;
+  }
 
-	#btn-mobile {
-		display: block;
-	}
-	
-	#menu {
-		display: block;
-		position: absolute;
-		width: 100%;
-		top: 62px;
-		right: 0px;
-		background: $yellow-dark;
-		height: 0px;
-		transition: .6s;
-		visibility: hidden;
-		overflow-y: hidden;
-	}
-	#nav.active #menu {
-		height: 100vh;
-		visibility: visible;
-		padding-bottom: 60px;
-		overflow-y: auto;
-	}
-	#menu li {
-		padding: 8px 0;
-		border-bottom: 2px solid rgba($color: $yellow-mid, $alpha: 1);
+  #menu {
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 62px;
+    right: 0px;
+    background: $yellow-dark;
+    height: 0px;
+    transition: 0.6s;
+    visibility: hidden;
+    overflow-y: hidden;
+  }
+  #nav.active #menu {
+    height: 100vh;
+    visibility: visible;
+    padding-bottom: 60px;
+    overflow-y: auto;
+  }
+  #menu li {
+    padding: 8px 0;
+    border-bottom: 2px solid rgba($color: $yellow-mid, $alpha: 1);
 
-		a {
-			margin: 0 1rem;
-			font-size: 1.25rem;
-			text-transform: uppercase;
-			color: $white-pure;
-			letter-spacing: 4.2px;
-			font-weight: 600px;
-		}
+    a {
+      margin: 0 1rem;
+      font-size: 1.25rem;
+      text-transform: uppercase;
+      color: $white-pure;
+      letter-spacing: 4.2px;
+      font-weight: 600px;
+    }
+  }
 
-	}
+  #btn-mobile {
+    display: flex;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    gap: 8px;
+  }
+  #hamburger {
+    display: block;
+    border-top: 2px solid;
+    width: 35px;
 
-	#btn-mobile {
-		display: flex;
-		padding: .5rem 1rem;
-		font-size: 1rem;
-		border: none;
-		background: none;
-		cursor: pointer;
-		gap: 8px;
-	}
-	#hamburger {
-		display: block;
-		border-top: 2px solid;
-		width: 35px;
+    &::after,
+    &::before {
+      content: "";
+      display: block;
+      width: 35px;
+      height: 2px;
+      background-color: currentColor;
+      margin-top: 8px;
+      transition: 0.3s;
+      position: relative;
+    }
+  }
 
-		&::after, &::before {
-			content: '';
-			display: block;
-			width: 35px;
-			height: 2px;
-			background-color: currentColor;
-			margin-top: 8px;
-			transition: .3s;
-			position: relative;
-		}
-	}
+  #nav.active #hamburger {
+    border-top-color: transparent;
 
-	#nav.active #hamburger {
-		border-top-color: transparent;
+    &::before {
+      transform: rotate(135deg);
+    }
 
-		&::before {
-			transform: rotate(135deg);
-		}
-	
-		&::after {
-			transform: rotate(-135deg);
-			top: -10px;
-		}
-	}
-	/* ------------------------- */
+    &::after {
+      transform: rotate(-135deg);
+      top: -10px;
+    }
+  }
+  /* ------------------------- */
 
-	.bg-menu {
-		.menu {
-			height: 62px;
-		}
+  .bg-menu {
+    .menu {
+      height: 62px;
+    }
 
-		.contact-menu {
-			max-width: 470px;
-			text-align: center;
-			padding: 0 20px;
-			margin: 0 auto;
-			margin-bottom: 20px;
-			display: flex;
-			justify-content: center;
-			flex-direction: column;
-			flex: 1 1 300px;
+    .contact-menu {
+      max-width: 470px;
+      text-align: center;
+      padding: 0 20px;
+      margin: 0 auto;
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      flex: 1 1 300px;
 
-			p {
-				color: $white-pure;
-				font-size: 1.125rem;
-				font-weight: bold;
-				margin-top: 40px;
-				margin-bottom: 8px;
+      p {
+        color: $white-pure;
+        font-size: 1.125rem;
+        font-weight: bold;
+        margin-top: 40px;
+        margin-bottom: 8px;
 
-				&:nth-last-child(1) {
-					font-size: .875rem;
-					margin-top: 12px;
-					color: $white-pure;
-					font-weight: normal;
-				}
-			}
+        &:nth-last-child(1) {
+          font-size: 0.875rem;
+          margin-top: 12px;
+          color: $white-pure;
+          font-weight: normal;
+        }
+      }
 
-			h2 {
-				font-size: 2rem;
-				color: $white-pure;
-				font-weight: bold;
-				margin-bottom: 17px;
-			}
+      h2 {
+        font-size: 2rem;
+        color: $white-pure;
+        font-weight: bold;
+        margin-bottom: 17px;
+      }
 
-			button {
-				width: 100%;
-				height: 80px;
-				background: $yellow-pure;
-				color: $white-pure;
-				font-size: 1.125rem;
-				font-family: 'Open Sans';
-				font-weight: bold;
-				text-transform: uppercase;
-				text-align: left;
-				border: none;
-				border-radius: 12px;
-				box-shadow: 0px 3px 6px rgba($color: $black-pure, $alpha: 0.29);
+      button {
+        width: 100%;
+        height: 80px;
+        background: $yellow-pure;
+        color: $white-pure;
+        font-size: 1.125rem;
+        font-family: "Open Sans";
+        font-weight: bold;
+        text-transform: uppercase;
+        text-align: left;
+        border: none;
+        border-radius: 12px;
+        box-shadow: 0px 3px 6px rgba($color: $black-pure, $alpha: 0.29);
 
-				& + button {
-					margin-top: 20px;
-				}
-			}
-		}
+        & + button {
+          margin-top: 20px;
+        }
+      }
+    }
+  }
 
-	}
-	.initial-banner {
-		align-items: flex-end;
+  .initial-banner {
+    align-items: flex-end;
 
-		blockquote {
-			max-width: 377px;
-			margin-left: 0;
-			padding: 0 16px;
-			
-			h1 {
-				font-size: 1.875rem;
-			}
-	
-			h2 {
-				display: none;
-			}
-	
-			div {
-				display: flex;
-				margin: 18px 0;
-	
-				p {
-					align-self: flex-start;
+    blockquote {
+      max-width: 377px;
+      margin-left: 0;
+      padding: 0 16px;
 
-					&:nth-child(1) {
-						font-size: 1.125rem;	
-						padding-right: 6px;			
-					}
-	
-					&:nth-last-child(2) {
-						font-size: 1.125rem;
-						font-weight: bold;
-						margin-right: 8px;
-						display: flex;
-	
-						span {
-							font-size: 2.125rem;
-							line-height: 36px;
-						}
-					}
-				}
-	
-				button {
-					font-size: .875rem;
-					margin-left: 10px;
-					padding: 11px 21px;
-					box-shadow: 0px 3px 6px rgba($color: $black-pure, $alpha: 0.5);
-	
-				}
-			}
-			
-			p {
-				&:nth-last-child(1) {
-					max-width: 317px;
-					margin-bottom: 30px;
-					font-size: .5rem;
-				}
-			}
-		}
-	}
+      h1 {
+        font-size: 1.875rem;
+      }
 
-	.gold-business {
-		h1 {
-			max-width: 350px;
-		}
-		ul {
-			padding: 24px;
-	
-			& li:nth-child(1) {
-				max-width: 140px;
-	
-				p:nth-child(1){
-					font-size: .975rem;
-				}
-				p:nth-child(2) {
-					font-size: .975rem;	
-				}
-				p:nth-child(3) {
-					font-size: 1.25rem;
-	
-					span {
-						font-size: 2.375rem;
-						line-height: 36px;
-					}
-				}
-			}
-	
-			& li:nth-child(2) {
-				max-width: 135px;
-				margin: 0 12px;
-				flex: 1 1 90px;
-				p:nth-child(1) {
-					font-size: .6rem;
-				}
-			}
-	
-			& li:nth-child(3) {
+      h2 {
+        display: none;
+      }
 
-				button {
-					letter-spacing: 1.2px;
-					font-size: .7rem;
-					padding: 7px 2px;;
-					
-					&:nth-child(1) {
-						background: $yellow-pure;
-						margin-bottom: 20px;
-					}
-					&:nth-child(2) {
-						background: $yellow-dark;
-					}
-				}
-			}
-		}
-	}	
+      div {
+        display: flex;
+        margin: 18px 0;
 
-	.contact {
-		blockquote {
-	
-			p {
-				font-size: 1.25rem;
-				color: $gray-high;
-				margin-left: 42px;
-			}
-		}
-	
-		.contact-form {
-			display: flex;
-			flex-wrap: wrap;
-			margin-bottom: 120px;
-	
-			article {
-				padding-right: 0;
-				flex: 1 1 300px;
-				position: relative;
-	
-				&::after {
-					content: '';
-					display: none;
-					width: 1px;
-					height: 488px;
-					background: rgba($color: $gray-low, $alpha: 0.24);
-					top: 0;
-					right: 0;
-					position: absolute;
-				}
-				
-				form {
-					label {
-						font-size: 1.125rem;
-						font-weight: bold;
-						color: $yellow-gold;
-					}
-	
-					input[type="text"], input[type="email"] {
-						width: 100%;
-						border: 1px solid $brown-low;
-						font-size: .8125rem;
-						padding: 20px;
-						margin-top: 12px;
-						margin-bottom: 20px;		
-					}
-	
-					div {
-						display: flex;
-						justify-content: center;
-						
-						input[type="button"] {
-							background: $yellow-pure;
-							width: 289px;
-							border: none;
-							border-radius: 30px;
-							padding: 12px 0;
-							margin-top: 16px;
-							font-size: 1rem;
-							font-weight: 600;
-							color: $white-pure;
-							letter-spacing: 3px;;
-							text-transform: uppercase;
-							font-family: 'Open Sans', Arial, Helvetica, sans-serif;
-							box-shadow: 0px 3px 6px rgba($color: $black-pure, $alpha: 0.29);
-							cursor: pointer;
-						}
-					}
-				}
-			}
-	
-			.contact-buttons {
-				padding-left: 0;
-	
-				p {
-					color: $gray-semi;
-					font-size: 1.125rem;
-					font-weight: bold;
-					margin-top: 20px;
-					margin-bottom: 8px;
-	
-					&:nth-last-child(1) {
-						font-size: .875rem;
-						margin-top: 12px;
-						color: $gray-light;
-						font-weight: normal;
-					}
-				}
-	
-				h2 {
-					font-size: 2rem;
-					color: $yellow-gold;
-					font-weight: bold;
-					margin-bottom: 17px;
-				}
-	
-				button {
-					width: 100%;
-					height: 90px;
-					background: $yellow-pure;
-					color: $white-pure;
-					font-size: 1.125rem;
-					font-family: 'Open Sans';
-					font-weight: bold;
-					text-transform: uppercase;
-					text-align: left;
-					border: none;
-					border-radius: 12px;
-					box-shadow: 0px 3px 6px rgba($color: $black-pure, $alpha: 0.29);
-	
-					& + button {
-						margin-top: 32px;
-					}
-				}
-			}
-		}
-	}
-	
+        p {
+          align-self: flex-start;
+
+          &:nth-child(1) {
+            font-size: 1.125rem;
+            padding-right: 6px;
+          }
+
+          &:nth-last-child(2) {
+            font-size: 1.125rem;
+            font-weight: bold;
+            margin-right: 8px;
+            display: flex;
+
+            span {
+              font-size: 2.125rem;
+              line-height: 36px;
+            }
+          }
+        }
+
+        button {
+          font-size: 0.875rem;
+          margin-left: 10px;
+          padding: 11px 21px;
+          box-shadow: 0px 3px 6px rgba($color: $black-pure, $alpha: 0.5);
+        }
+      }
+
+      p {
+        &:nth-last-child(1) {
+          max-width: 317px;
+          margin-bottom: 30px;
+          font-size: 0.5rem;
+        }
+      }
+    }
+  }
+
+  .gold-business {
+    h1 {
+      max-width: 350px;
+    }
+    ul {
+      padding: 24px;
+
+      & li:nth-child(1) {
+        max-width: 140px;
+        flex: 1 1 100px;
+
+        p:nth-child(1) {
+          font-size: 0.975rem;
+        }
+        p:nth-child(2) {
+          font-size: 0.975rem;
+        }
+        p:nth-child(3) {
+          font-size: 1.25rem;
+
+          span {
+            font-size: 2.375rem;
+            line-height: 36px;
+          }
+        }
+      }
+
+      & li:nth-child(2) {
+        max-width: 135px;
+        margin: 0 2px;
+        flex: 1 1 90px;
+        p:nth-child(1) {
+          font-size: 0.5rem;
+        }
+      }
+
+      & li:nth-child(3) {
+        button {
+          letter-spacing: 1.2px;
+          font-size: 0.7rem;
+          padding: 7px 2px;
+
+          &:nth-child(1) {
+            background: $yellow-pure;
+            margin-bottom: 20px;
+          }
+          &:nth-child(2) {
+            background: $yellow-dark;
+          }
+        }
+      }
+    }
+  }
+
+  .benefit {
+    ul {
+      li {
+        min-height: 0px;
+        border-radius: 12px;
+
+        div {
+          max-width: 442px;
+          padding: 0 10px;
+          margin: 0 auto;
+        }
+
+        h2 {
+          font-size: 0.975rem;
+        }
+
+        p {
+          font-size: 0.85rem;
+          padding: 0 10px;
+          line-height: 17px;
+        }
+
+        &:nth-child(1) {
+          h2 {
+            margin-top: 8px;
+          }
+
+          p {
+            margin-top: 8px;
+            margin-bottom: 17px;
+          }
+
+          button {
+            font-size: 0.675rem;
+            padding: 9px 0;
+            margin-bottom: 33px;
+          }
+        }
+
+        &:nth-child(2) {
+          h2 {
+            margin: 0 auto;
+            max-width: 190px;
+            margin-top: 16px;
+          }
+
+          p {
+            margin-top: 22px;
+            margin-bottom: 25px;
+            line-height: 17px;
+          }
+        }
+      }
+    }
+  }
+
+  .services {
+    .services-cards {
+      .services-item {
+        min-height: 0;
+        padding-bottom: 40px;
+
+        div {
+          h2 {
+            font-size: 1.25rem;
+            margin-top: 27px;
+            margin-bottom: 18px;
+          }
+
+          h3 {
+            font-size: 0.975rem;
+            max-width: 244px;
+            margin: 0 auto;
+            line-height: 20px;
+          }
+
+          ul {
+            li {
+              p {
+                max-width: 225px;
+                font-size: 0.875rem;
+              }
+            }
+
+            li + li {
+              margin-top: 18px;
+            }
+          }
+        }
+
+        &:nth-child(2) div {
+          h3 {
+            text-align: center;
+
+            &::after {
+              margin-top: 30px;
+            }
+          }
+          ul {
+            margin: 0 20px;
+
+            p {
+              max-width: 200px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .contact {
+    blockquote {
+      margin-top: 16px;
+      margin-bottom: 20px;
+      flex-grow: 1;
+      p {
+        flex: 1 1 200px;
+        font-size: 0.975rem;
+        margin-left: 8px;
+      }
+    }
+
+    .contact-form {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 120px;
+
+      article {
+        padding-right: 0;
+        flex: 1 1 300px;
+        position: relative;
+
+        &::after {
+          content: "";
+          display: none;
+          width: 1px;
+          height: 488px;
+          background: rgba($color: $gray-low, $alpha: 0.24);
+          top: 0;
+          right: 0;
+          position: absolute;
+        }
+
+        form {
+          label {
+            font-size: 1.125rem;
+            font-weight: bold;
+            color: $yellow-gold;
+          }
+
+          input[type="text"],
+          input[type="email"] {
+            width: 100%;
+            border: 1px solid $brown-low;
+            font-size: 0.8125rem;
+            padding: 20px;
+            margin-top: 12px;
+            margin-bottom: 20px;
+          }
+
+          div {
+            display: flex;
+            justify-content: center;
+
+            input[type="button"] {
+              background: $yellow-pure;
+              width: 289px;
+              border: none;
+              border-radius: 30px;
+              padding: 12px 0;
+              margin-top: 16px;
+              font-size: 1rem;
+              font-weight: 600;
+              color: $white-pure;
+              letter-spacing: 3px;
+              text-transform: uppercase;
+              font-family: "Open Sans", Arial, Helvetica, sans-serif;
+              box-shadow: 0px 3px 6px rgba($color: $black-pure, $alpha: 0.29);
+              cursor: pointer;
+            }
+          }
+        }
+      }
+
+      .contact-buttons {
+        padding-left: 0;
+
+        p {
+          color: $gray-semi;
+          font-size: 1.125rem;
+          font-weight: bold;
+          margin-top: 20px;
+          margin-bottom: 8px;
+
+          &:nth-last-child(1) {
+            font-size: 0.875rem;
+            margin-top: 12px;
+            color: $gray-light;
+            font-weight: normal;
+          }
+        }
+
+        h2 {
+          font-size: 2rem;
+          color: $yellow-gold;
+          font-weight: bold;
+          margin-bottom: 17px;
+        }
+
+        button {
+          width: 100%;
+          height: 90px;
+          background: $yellow-pure;
+          color: $white-pure;
+          font-size: 1.125rem;
+          font-family: "Open Sans";
+          font-weight: bold;
+          text-transform: uppercase;
+          text-align: left;
+          border: none;
+          border-radius: 12px;
+          box-shadow: 0px 3px 6px rgba($color: $black-pure, $alpha: 0.29);
+
+          & + button {
+            margin-top: 32px;
+          }
+        }
+      }
+    }
+  }
 }

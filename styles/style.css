@@ -3,14 +3,22 @@
   box-sizing: border-box;
 }
 
-body, h1, h2, h3, a, p, ul, li, blockquote {
+body,
+h1,
+h2,
+h3,
+a,
+p,
+ul,
+li,
+blockquote {
   margin: 0;
   padding: 0;
 }
 
 body {
-  background: #FBFBFB;
-  font-family: 'Open Sans';
+  background: #fbfbfb;
+  font-family: "Open Sans";
 }
 
 a {
@@ -37,7 +45,7 @@ p {
 }
 
 .title-template::after {
-  content: '';
+  content: "";
   display: block;
   width: 202px;
   height: 2px;
@@ -118,7 +126,7 @@ p {
 }
 
 .initial-banner blockquote h1::after {
-  content: '';
+  content: "";
   display: block;
   width: 202px;
   height: 2px;
@@ -163,7 +171,7 @@ p {
 .initial-banner blockquote div button {
   background: #F7B53D;
   color: #FFFFFF;
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   font-size: 1.375rem;
   text-transform: uppercase;
   cursor: pointer;
@@ -175,7 +183,7 @@ p {
 
 .initial-banner blockquote p:nth-last-child(1) {
   max-width: 476px;
-  font-size: .75rem;
+  font-size: 0.75rem;
   color: rgba(255, 255, 255, 0.5);
 }
 
@@ -231,7 +239,7 @@ p {
 
 .gold-business ul li:nth-child(2) p:nth-child(1) {
   color: #FFFFFF;
-  font-size: .625rem;
+  font-size: 0.625rem;
   margin-bottom: 10px;
 }
 
@@ -245,7 +253,7 @@ p {
 .gold-business ul li:nth-child(3) button {
   width: 100%;
   letter-spacing: 1.7px;
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   font-size: 1rem;
   font-weight: bold;
   text-transform: uppercase;
@@ -344,8 +352,8 @@ p {
 
 .benefit ul li:nth-child(1) button {
   width: 100%;
-  font-family: 'Open Sans';
-  font-size: .875rem;
+  font-family: "Open Sans";
+  font-size: 0.875rem;
   font-weight: bold;
   letter-spacing: 1.4px;
   text-transform: uppercase;
@@ -408,7 +416,7 @@ p {
 }
 
 .services .services-cards .services-item div h3::after {
-  content: '';
+  content: "";
   display: block;
   width: 225px;
   height: 2px;
@@ -430,7 +438,7 @@ p {
 }
 
 .services .services-cards .services-item div ul li span::before {
-  content: '';
+  content: "";
   display: block;
   background: #F7B53D;
   width: 7px;
@@ -442,7 +450,7 @@ p {
 }
 
 .services .services-cards .services-item div ul li span::after {
-  content: '';
+  content: "";
   display: block;
   background: #F7B53D;
   width: 17px;
@@ -482,13 +490,13 @@ p {
   margin-top: 60px;
   margin-bottom: 120px;
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
 }
 
 .contact blockquote p {
   font-size: 1.25rem;
   color: #404040;
+  margin-top: 30px;
   margin-left: 42px;
 }
 
@@ -506,7 +514,7 @@ p {
 }
 
 .contact .contact-form article::after {
-  content: '';
+  content: "";
   display: block;
   width: 1px;
   height: 488px;
@@ -522,10 +530,11 @@ p {
   color: #E8BB15;
 }
 
-.contact .contact-form article form input[type="text"], .contact .contact-form article form input[type="email"] {
+.contact .contact-form article form input[type="text"],
+.contact .contact-form article form input[type="email"] {
   width: 100%;
   border: 1px solid #D0BC90;
-  font-size: .8125rem;
+  font-size: 0.8125rem;
   padding: 20px;
   margin-top: 12px;
   margin-bottom: 20px;
@@ -548,7 +557,7 @@ p {
   color: #FFFFFF;
   letter-spacing: 3px;
   text-transform: uppercase;
-  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.29);
   cursor: pointer;
 }
@@ -572,7 +581,7 @@ p {
 }
 
 .contact .contact-form .contact-buttons p:nth-last-child(1) {
-  font-size: .875rem;
+  font-size: 0.875rem;
   margin-top: 12px;
   color: #A7A7A7;
   font-weight: normal;
@@ -591,7 +600,7 @@ p {
   background: #F7B53D;
   color: #FFFFFF;
   font-size: 1.125rem;
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   font-weight: bold;
   text-transform: uppercase;
   text-align: left;
@@ -626,5 +635,5 @@ p {
 .footer p {
   text-align: center;
   color: #FFFFFF;
-  font-size: .875rem;
+  font-size: 0.875rem;
 }
