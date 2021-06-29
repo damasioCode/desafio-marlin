@@ -19,19 +19,6 @@
 	display: none;
 }
 
-#menu {
-	display: none;
-	position: absolute;
-	width: 100%;
-	top: 62px;
-	right: 0px;
-	background: $yellow-dark;
-	height: 0px;
-	transition: .6s;
-	visibility: hidden;
-	overflow-y: hidden;
-}
-
 @media (max-width: 792px) {
 
 	.container {
@@ -58,6 +45,7 @@
 	#nav.active #menu {
 		height: 100vh;
 		visibility: visible;
+		padding-bottom: 60px;
 		overflow-y: auto;
 	}
 	#menu li {
@@ -304,14 +292,13 @@
 			margin-bottom: 120px;
 	
 			article {
-				max-width: 582px;
-				padding-right: 62px;
+				padding-right: 0;
 				flex: 1 1 300px;
 				position: relative;
 	
 				&::after {
 					content: '';
-					display: block;
+					display: none;
 					width: 1px;
 					height: 488px;
 					background: rgba($color: $gray-low, $alpha: 0.24);
@@ -361,13 +348,7 @@
 			}
 	
 			.contact-buttons {
-				max-width: 470px;
-				padding-left: 62px;
-				text-align: center;
-				display: flex;
-				justify-content: center;
-				flex-direction: column;
-				flex: 1 1 300px;
+				padding-left: 0;
 	
 				p {
 					color: $gray-semi;

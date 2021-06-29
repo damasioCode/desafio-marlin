@@ -18,19 +18,6 @@
   display: none;
 }
 
-#menu {
-  display: none;
-  position: absolute;
-  width: 100%;
-  top: 62px;
-  right: 0px;
-  background: #9A6D0C;
-  height: 0px;
-  transition: .6s;
-  visibility: hidden;
-  overflow-y: hidden;
-}
-
 @media (max-width: 792px) {
   .container {
     padding: 18px;
@@ -54,6 +41,7 @@
   #nav.active #menu {
     height: 100vh;
     visibility: visible;
+    padding-bottom: 60px;
     overflow-y: auto;
   }
   #menu li {
@@ -252,14 +240,13 @@
     margin-bottom: 120px;
   }
   .contact .contact-form article {
-    max-width: 582px;
-    padding-right: 62px;
+    padding-right: 0;
     flex: 1 1 300px;
     position: relative;
   }
   .contact .contact-form article::after {
     content: '';
-    display: block;
+    display: none;
     width: 1px;
     height: 488px;
     background: rgba(112, 112, 112, 0.24);
@@ -301,13 +288,7 @@
     cursor: pointer;
   }
   .contact .contact-form .contact-buttons {
-    max-width: 470px;
-    padding-left: 62px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    flex: 1 1 300px;
+    padding-left: 0;
   }
   .contact .contact-form .contact-buttons p {
     color: #4B4B4B;
